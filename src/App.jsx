@@ -17,7 +17,9 @@ export default function App() {
       <Navbar onOpenVerify={() => setIsVerifyOpen(true)} />
       
       <main>
-        <Hero onOpFenVerify={() => setIsVerifyOpen(true)} />
+        {/* PERBAIKAN DI SINI: Ubah onOpFenVerify menjadi onOpenVerify */}
+        <Hero onOpenVerify={() => setIsVerifyOpen(true)} />
+        
         <MainFindings />
         <ResearchData />
         <ObservationReport />

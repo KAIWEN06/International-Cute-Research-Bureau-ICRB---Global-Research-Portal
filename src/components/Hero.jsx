@@ -2,7 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Award, QrCode, ArrowRight } from 'lucide-react';
 
-export default function Hero({ onOpenVerify }) {
+export default function Hero() {
+  // Fungsi untuk melakukan smooth scroll berdasarkan ID tujuan
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20 lg:py-28 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,18 +52,19 @@ export default function Hero({ onOpenVerify }) {
             {/* Tombol Aksi */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
               <button
-                onClick={onOpenVerify}
-                className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-medium shadow-lg shadow-blue-500/25 transition-all transform hover:-translate-y-0.5"
+                onClick={() => scrollToSection('findings')}
+                className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-medium shadow-lg shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Baca Riset</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <a
-                href="#findings"
-                className="inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-6 py-3.5 rounded-xl font-medium transition-colors"
+              
+              <button
+                onClick={() => scrollToSection('research-data')}
+                className="inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-6 py-3.5 rounded-xl font-medium transition-colors cursor-pointer"
               >
                 <span>Jelajahi Data</span>
-              </a>
+              </button>
             </div>
           </motion.div>
 

@@ -24,7 +24,7 @@ const complimentData = [
 
 export default function ResearchData() {
   return (
-    <section id="statistics" className="py-20 bg-slate-50 border-y border-slate-200">
+    <section id="research-data" className="py-20 bg-slate-50 border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
