@@ -16,10 +16,10 @@ const sleepData = [
 ];
 
 const complimentData = [
-  { name: 'Imut', value: 45, color: '#3b82f6' },
-  { name: 'Menggemaskan', value: 30, color: '#60a5fa' },
-  { name: 'Lucu', value: 15, color: '#93c5fd' },
-  { name: 'Cantik/Indah', value: 10, color: '#bfdbfe' },
+  { name: 'Imut', value: 25, color: '#3b82f6' },
+  { name: 'Menggemaskan', value: 25, color: '#60a5fa' },
+  { name: 'Lucu', value: 25, color: '#93c5fd' },
+  { name: 'Cantik/Indah', value: 25, color: '#bfdbfe' },
 ];
 
 export default function ResearchData() {
